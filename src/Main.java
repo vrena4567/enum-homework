@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
         Month thisMonth = Month.JUNE;
@@ -11,5 +13,18 @@ public class Main {
         for (Season season: Season.values()) {
             System.out.println(season);
         }
+
+        System.out.println(thisMonth.isSummerMonth());
+        System.out.println(thisMonth.isAutumnMonth());
+        System.out.println(thisMonth.isWinterMonth());
+        System.out.println(thisMonth.isSpringMonth());
+
+        System.out.println(thisMonth.getMonthNumber());
+
+        for (Month month : Month.values()) {
+            System.out.println(month.getMonthNumber() + ". hónap: " + month.getHungarianName());
+        }
+
+        System.out.println(thisSeason.getHungarianName());
     }
 }

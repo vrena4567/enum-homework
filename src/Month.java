@@ -7,7 +7,7 @@ public enum Month {
     JUNE("Június"),
     JULY("Július"),
     AUGUST("Augusztus"),
-    SEPTERMBER("Szeptember"),
+    SEPTEMBER("Szeptember"),
     OCTOBER("Október"),
     NOVEMBER("November"),
     DECEMBER("December");
@@ -21,5 +21,18 @@ public enum Month {
         return this.hungarianName;
     }
 
+    public boolean isSummerMonth() {
+        return this == JUNE || this == JULY || this == AUGUST;
+    }public boolean isAutumnMonth() {
+        return this == SEPTEMBER || this == OCTOBER || this == NOVEMBER;
+    }public boolean isWinterMonth() {
+        return this == DECEMBER || this == JANUARY || this == FEBRUARY;
+    }public boolean isSpringMonth() {
+        return this == MARCH || this == APRIL || this == MAY;
+    }
+
+    public int getMonthNumber() {
+        return this.ordinal() + 1;
+    }
 
 }
